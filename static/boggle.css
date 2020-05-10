@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#guess_form, #new {
+    display: none;
+}
+
+td {
+    font-size: 30px;
+    padding: 5px 9px 5px 9px;
+}
+
+#container {
+    width: 100px;
+}
+
+hr {
+    width: 200px;
+}
+

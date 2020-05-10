@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" /> -->
+    <link rel="stylesheet" href="static/boggle.css">
+</head>
+<body>
+    <h1>BOGGLE</h1>
+    <table>
+        {% for row in board %}
+            <tr>
+            {% for letter in row %}
+                <td>{{ letter }}</td>
+            {% endfor %}    
+            </tr>    
+        {% endfor %}    
+    </table>
+    <hr>
+    <div id="container">
+        <form id="guess_form">
+            <input type="text" id="guess" placeholder="Enter a word" minlength=2>
+            <input type="submit">
+        </form>
+        <button id="start">Start Game</button>
+        <button id="new">New Game</button>
+        <div id="message_box">
+            <p id="message"></p>
+        </div>
+        <p id="score">Score: </p>
+        <p id="timer">Time: </p>
+        <p id="high_score">High Score: </p>
+        <p id="games">Games Played: </p>
+    </div>
+    
+    <!-- <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script> -->
+    <!-- <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script> -->
+    <!-- <script src="https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script> -->
+    <!-- <script src="static/boggle_test.js"></script> -->
+    <script src="static/boggle.js"></script>
+    <script src="static/app.js"></script>
+</body>
+</html>
